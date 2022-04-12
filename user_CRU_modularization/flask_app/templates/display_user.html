@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user</title>
+</head>
+<body>
+    <h1>{{ user.first_name }}</h1>
+    <div class="row m-auto">
+        <div class="col-sm-6">
+            <div class="card">
+            <div class="card-body">
+                <p> First name : {{ user.first_name }} </p>
+                <p> Last name : {{ user.last_name }} </p>
+                <p> Email: {{user.email}}</p>
+                <p> Created at : {{ user.created_at }} </p>
+                <a href="/users/edit/{{user.id}}" class="btn btn-primary">Edit</a> | <a href="/users/delete/{{user.id}}" class="btn btn-primary">Delete</a>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
