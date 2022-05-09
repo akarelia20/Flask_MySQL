@@ -17,6 +17,7 @@
 6. if you do not see flask, bcrypt, jinja, Pymysql.....Ect in the list then , type this following command in command line to install the dependencies to run this application
 
 > pipenv install PyMySQL flask
+
 > pipenv install flask-bcrypt
 
 7. to connect this application to the database, open the .mwb file in MySQL and forward engineer it.
@@ -25,5 +26,5 @@
 
 > python3 server.py
 
-This should serve the frontend on port 3000. 
+This should serve the frontend on port 5000. 
 Then in your browser search: http://localhost:5000/
