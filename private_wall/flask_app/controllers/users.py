@@ -52,8 +52,9 @@ def dashbord():
     data = {
         "id"  : session['user_id']
     }
+    sent_meg = message.Message.count(data)
     number_of_messeges = len(user.User.all_received_messages(data))
-    return render_template("dashbord.html", logged_in_user = user.User.get_user_by_id(data), users = user.User.get_all_registered_users(data), user_with_messages = user.User.all_received_messages(data), messeges = number_of_messeges  )
+    return render_template("dashbord.html", logged_in_user = user.User.get_user_by_id(data), users = user.User.get_all_registered_users(data), user_with_messages = user.User.all_received_messages(data), messeges = number_of_messeges, sent_meg= sent_meg )
 
 @app.route("/logout")
 def logout():

@@ -115,10 +115,10 @@ class User:
         print(user_with_recieved_message)
         return user_with_recieved_message
     
-    def messages_sent(self,count):
+    def messages_sent(self):
         self.count += 1
         print(f"***************************************{self.count}")
-        return self.count
+        return self
         
     def count_messages(self):
         return f" You have sent {self.count} messeges so far"

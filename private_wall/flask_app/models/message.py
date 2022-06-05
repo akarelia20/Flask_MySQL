@@ -39,3 +39,8 @@ class Message:
         query = "DELETE FROM messages where id = %(id)s;"
         return MySQLConnection(cls.db).query_db(query,data)
     
+    @classmethod
+    def count(cls,data):
+        query= "SELECT * From messages where users_id = %(id)s;"
+        results = connectToMySQL(Message.db).query_db(query,data)
+        return len(results)
